@@ -199,44 +199,64 @@ header p {
     background-color: rgba(0, 0, 0, 0.3); /* Darken the images */
     z-index: 1;
   }
-section {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+
+#service{
+    margin-left: 5vh;
 }
-.services, .testimonials {
+
+#service h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.services {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 10vw;
+    scroll-snap-type: x mandatory;
 }
-.services .service, .testimonials .testimonial {
-    flex: 1 1 calc(33.333% - 1rem);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
 }
-.services .service img, .testimonials .testimonial img {
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
     width: 100%;
+    border-radius: 10px;
     height: auto;
 }
-.services .service h3, .testimonials .testimonial h3 {
-    font-size: 1.5rem;
+
+.service-card h3{
+    font-size: 1.25rem;
+    margin-top: 10px;
 }
 
-.service h3{
-    padding: 1vw;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+.service-card p{
+    font-size: 1rem;
+    color: #666;
 }
 
-.service p{
-    padding: 1vw;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .service-card {
+        width: 100%;
+    }
 }
 
 #footer {
@@ -257,7 +277,21 @@ section {
     margin: 0;
 }
 
-#contact div{
+#footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-contact_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#follow_us{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,6 +339,18 @@ section {
 #follow_us i{
     font-size:2rm;
     color: whitesmoke;
+}
+
+#follow-Insta{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vh;
+}
+
+#follow-Insta p{
+    margin: 0;
+    color: whitesmoke;
+    text-decoration: None;
 }
 
 #footer-footer{
