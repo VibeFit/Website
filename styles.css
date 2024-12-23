@@ -206,6 +206,7 @@ header p {
 
 #service h2{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4vh;
 }
 
 .services {
@@ -213,8 +214,13 @@ header p {
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
-    margin-left: 10vw;
+    margin-left: 0.5vw;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.services::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
 }
 
 .service-card {
@@ -227,6 +233,8 @@ header p {
     flex-shrink: 0;
     scroll-snap-align: start;
     transition: transform 0.3s ease-in-out;
+    color: #000;
+    text-decoration: None;
 }
 
 .service-card:hover {
@@ -242,11 +250,14 @@ header p {
 .service-card h3{
     font-size: 1.25rem;
     margin-top: 10px;
+    color: #000;
+    text-decoration: None;
 }
 
 .service-card p{
     font-size: 1rem;
     color: #666;
+    text-decoration: None;
 }
 
 @media (max-width: 768px) {
