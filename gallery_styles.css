@@ -110,6 +110,13 @@ header p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  background-color: #f0f0f0; /* Placeholder background */
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Initially hide images */
+}
+
+.image img.loaded {
+  opacity: 1; /* Show images when loaded */
 }
 
 .image img:hover {
